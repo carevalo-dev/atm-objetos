@@ -30,11 +30,11 @@ class Cliente extends Persona{
         this.numeroCliente = numeroCliente;
     }
 
-    //crear metodo para obtener el numero de cliente
+    //crear método para obtener el numero de cliente
     getNumeroCliente(){
         return this.numeroCliente;
     }
-    //crear metodo para obtener los datos del cliente
+    //crear método para obtener los datos del cliente
     getDatosCliente(){
         return `Nombre: ${this.nombres} ${this.apellidos} Edad: ${this.getEdad()} País: ${this.pais} Ciudad: ${this.ciudad} Número de cliente: ${this.getNumeroCliente()}`;
     }
@@ -47,17 +47,17 @@ class CuentaBanco extends Cliente{
         this.saldo = saldo;
     }
 
-    //crear metodo para obtener el saldo
+    //crear método para obtener el saldo
     getSaldo(){
         return this.saldo;
     }
 
-    //crear metodo para depositar
+    //crear método para depositar
     depositar(monto){
         this.saldo += monto;
     }
 
-    //crear metodo para retirar
+    //crear método para retirar
     retirar(monto){
         if(this.saldo >= monto){
             this.saldo -= monto;
@@ -66,3 +66,12 @@ class CuentaBanco extends Cliente{
         }
     }
 }
+
+//captura los id
+
+const optionRetirar = document.getElementById("optionRetirar");
+const optionDepositar = document.getElementById("optionDepositar");
+const optionSaldo = document.getElementById("optionSaldo");
+const optionDatos = document.getElementById("optionDatos");
+const optionSalir = document.getElementById("optionSalir");
+
