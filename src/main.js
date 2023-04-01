@@ -1,12 +1,10 @@
 //crear clase persona
 class Persona {
-    constructor(nombres, apellidos,genero,fechaNacimiento,pais,ciudad){
+    constructor(nombres, apellidos,genero,fechaNacimiento){
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.genero = genero;
         this.fechaNacimiento = fechaNacimiento;
-        this.pais = pais;
-        this.ciudad = ciudad;
     }
 
     //método para obtener la edad
@@ -30,7 +28,7 @@ class Cliente extends Persona{
         this.numeroCliente = numeroCliente;
     }
 
-    //crear método para obtener el numero de cliente
+    //crear método para obtener el número de cliente
     getNumeroCliente(){
         return this.numeroCliente;
     }
@@ -67,11 +65,16 @@ class CuentaBanco extends Cliente{
     }
 }
 
-//captura los id
+const optionCrearCuenta = document.getElementById("optionCrearCuenta");
+const menuPrincipal = document.getElementById("menuPrincipal");
+const menuCrearCuenta = document.getElementById("menuCrearCuenta");
 
-const optionRetirar = document.getElementById("optionRetirar");
-const optionDepositar = document.getElementById("optionDepositar");
-const optionSaldo = document.getElementById("optionSaldo");
-const optionDatos = document.getElementById("optionDatos");
-const optionSalir = document.getElementById("optionSalir");
+optionCrearCuenta.addEventListener("click", crearCuenta);
+
+function crearCuenta(){
+menuPrincipal.style.display = "none";
+    menuCrearCuenta.style.display = "block";
+
+}
+
 
